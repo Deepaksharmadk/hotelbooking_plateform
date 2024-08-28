@@ -6,6 +6,7 @@ import Stripe from "stripe";
 import verifyToken from "../middleware/auth";
 
 const stripe = new Stripe(process.env.STRIPE_API_KEY as string);
+console.log(stripe);
 
 const router = express.Router();
 

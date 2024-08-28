@@ -36,7 +36,7 @@ router.post(
     if (!errors.isEmpty()) {
       return res.status(400).json({ message: errors.array() });
     }
-
+    console.log(req.socket.remoteAddress);
     try {
       let user = await User.findOne({
         email: req.body.email,
